@@ -1,0 +1,1 @@
+{"BackupPlan":{"BackupPlanName":"SysOps-Lab06","Rules":[{"RuleName":"Daily","TargetBackupVaultName":"SysOps-Lab06-REPLACE_SUFFIX","ScheduleExpression":"cron(0 18 ? * * *)","StartWindowMinutes":60,"CompletionWindowMinutes":180,"Lifecycle":{"DeleteAfterDays":7},"RecoveryPointTags":{"Course":"TGS-2024051413"}}]}}

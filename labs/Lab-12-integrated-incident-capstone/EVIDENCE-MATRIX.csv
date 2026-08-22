@@ -1,0 +1,2 @@
+evidence_id,source,timestamp_utc,reliability,observation,decision_use
+EV-101,CloudTrail,REPLACE,High,REPLACE,REPLACE

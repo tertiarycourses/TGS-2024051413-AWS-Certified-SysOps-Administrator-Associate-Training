@@ -1,0 +1,15 @@
+description: Verify versioning and public-access block on a learner-owned S3 bucket
+schemaVersion: '0.3'
+assumeRole: ''
+parameters:
+  BucketName: {type: String, description: Learner-owned bucket name}
+mainSteps:
+  - name: getVersioning
+    action: aws:executeAwsApi
+    inputs: {Service: s3, Api: GetBucketVersioning, Bucket: '{{ BucketName }}'}
+    outputs: [{Name: Status, Selector: '$.Status', Type: String}]
+  - name: assertVersioning
+    action: aws:assertAwsResourceProperty
+    inputs: {Service: s3, Api: GetBucketVersioning, Bucket: '{{ BucketName }}', PropertySelector: '$.Status', DesiredValues: [Enabled]}
+outputs:
+  - getVersioning.Status

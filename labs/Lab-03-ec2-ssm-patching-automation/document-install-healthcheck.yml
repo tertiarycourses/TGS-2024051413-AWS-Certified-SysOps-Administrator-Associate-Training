@@ -1,0 +1,13 @@
+schemaVersion: '2.2'
+description: Install and verify a minimal local health endpoint
+parameters:
+  Message: {type: String, default: 'TGS-2024051413 healthy'}
+mainSteps:
+  - action: aws:runShellScript
+    name: installHealthCheck
+    inputs:
+      runCommand:
+        - 'set -euo pipefail'
+        - 'printf "%s\n" "{{ Message }}" | sudo tee /var/tmp/sysops-health.txt'
+        - 'test -s /var/tmp/sysops-health.txt'
+        - 'cat /var/tmp/sysops-health.txt'

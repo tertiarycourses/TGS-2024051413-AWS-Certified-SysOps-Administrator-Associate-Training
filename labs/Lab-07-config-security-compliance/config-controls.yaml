@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: TGS-2024051413 Lab 07 Config controls
+Resources:
+  RequiredTags:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: required-tags
+      InputParameters: '{"tag1Key":"Course","tag1Value":"TGS-2024051413"}'
+      Source: {Owner: AWS, SourceIdentifier: REQUIRED_TAGS}
+  EncryptedVolumes:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: encrypted-volumes
+      Source: {Owner: AWS, SourceIdentifier: ENCRYPTED_VOLUMES}

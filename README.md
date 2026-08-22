@@ -1,69 +1,61 @@
-# TGS-2024051413 - AWS Certified SysOps Administrator Associate Training
+# AWS Certified SysOps Administrator Associate Training
 
-> Course: AWS Certified SysOps Administrator Associate Training  
-> Course Code: TGS-2024051413  
-> Register here: https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html
+Course code: **TGS-2024051413**
+Duration: **3 days / 24 hours**
+Provider: **Tertiary Infotech Academy Pte Ltd**
 
-Hands-on AWS Certified SysOps Administrator Associate labs for learners building cloud operations skills and preparing for operations-focused AWS certification scenarios. The labs cover monitoring, logging, automation, compute operations, networking, storage, backup, databases, security, compliance, cost optimization, business continuity, and incident response.
+[![Course](https://img.shields.io/badge/WSQ-TGS--2024051413-1f6feb)](https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html)
+[![AWS](https://img.shields.io/badge/AWS-CloudOps-ff9900)](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)
 
-Note: AWS currently positions this certification path through the updated AWS Certified CloudOps Engineer - Associate exam. These labs preserve the requested SysOps Administrator course naming while focusing on the underlying AWS operations skills.
+This repository contains the learner-facing v5.0 courseware and twelve self-contained AWS operations labs. The approved WSQ course title remains SysOps Administrator; certification-readiness content follows the current AWS Certified CloudOps Engineer — Associate (SOA-C03) blueprint.
+
+![AWS CloudOps course visual](courseware/assets/aws-sysops-cover-hero.png)
 
 ## Courseware
 
-| File | Description |
+| Resource | Description |
 | --- | --- |
-| [Learner Guide](LG-AWS-Certified-SysOps-Administrator-Associate-Training.md) | Detailed step-by-step guide for the full course. |
-| [Labs Index](labs/README.md) | Quick access to all hands-on labs. |
-| [Tools Reference](labs/tools.md) | Free and built-in AWS tools used in the labs. |
+| [Learner Guide](LG-AWS-Certified-SysOps-Administrator-Associate-Training.md) | Detailed concepts, step-by-step lab procedures, troubleshooting and assessment readiness. |
+| [Labs index](labs/README.md) | All 12 labs, scheduled at exactly four labs per day. |
+| `courseware/` | v5.0 PowerPoint/PDF, Learner Guide DOCX/PDF and Lesson Plan DOCX/PDF. |
 
-## How to Use
+## Three-Day Lab Journey
 
-1. Open the learner guide first and review the account safety checklist.
-2. Complete the labs in order because later labs reuse monitoring, tagging, IAM, and runbook practices from earlier labs.
-3. Use an AWS Free Tier or training sandbox account where possible.
-4. Delete or stop billable resources after each lab unless your trainer instructs otherwise.
-5. Record screenshots, commands, and observations in your own lab journal.
-
-## Lab Catalogue
-
-### Domain 1: Monitoring, Logging, and Operations
-
-| Lab | Title | Skills Practised |
+| Day | Labs | Operational focus |
 | --- | --- | --- |
-| [Lab 01](labs/lab-01-account-iam-monitoring-baseline.md) | Account Safety, IAM, and Monitoring Baseline | MFA, IAM, budgets, tags, CloudShell, operational baselines |
-| [Lab 02](labs/lab-02-cloudwatch-cloudtrail-eventbridge-operations.md) | CloudWatch, CloudTrail, and EventBridge Operations | Metrics, logs, alarms, trails, event rules, operational visibility |
+| 1 | 01–04 | Observability, event-driven triage, EC2 fleet operations and Multi-AZ failover |
+| 2 | 05–08 | Infrastructure automation, restore assurance, compliance and IAM/KMS protection |
+| 3 | 09–12 | Network diagnosis, DNS/content delivery failover, data recovery and incident capstone |
 
-### Domain 2: Compute, Networking, Storage, and Continuity
+## Labs
 
-| Lab | Title | Skills Practised |
-| --- | --- | --- |
-| [Lab 03](labs/lab-03-ec2-systems-manager-patching-automation.md) | EC2, Systems Manager, Patching, and Automation | EC2 operations, Session Manager, Run Command, Patch Manager, Automation |
-| [Lab 04](labs/lab-04-vpc-networking-dns-load-balancing.md) | VPC Networking, DNS, and Load Balancing | Subnets, route tables, security groups, NACLs, Route 53, ELB, flow logs |
-| [Lab 05](labs/lab-05-storage-backup-data-protection.md) | Storage, Backup, and Data Protection | S3, EBS snapshots, EFS, lifecycle policies, AWS Backup |
-| [Lab 06](labs/lab-06-databases-ha-business-continuity.md) | Databases, High Availability, and Business Continuity | RDS, DynamoDB, backup, Multi-AZ, read replicas, RTO/RPO |
+1. [Build an Observability and Incident Detection Baseline](labs/Lab-01-observability-incident-baseline/README.md)
+2. [Automate Event-Driven Incident Triage](labs/Lab-02-event-driven-incident-response/README.md)
+3. [Operate an EC2 Fleet with Systems Manager](labs/Lab-03-ec2-ssm-patching-automation/README.md)
+4. [Deploy and Test a Multi-AZ Highly Available Service](labs/Lab-04-ha-autoscaling-failover/README.md)
+5. [Control Infrastructure Change and Configuration Drift](labs/Lab-05-cloudformation-automation-drift/README.md)
+6. [Prove Backup and Restore Readiness](labs/Lab-06-backup-restore-assurance/README.md)
+7. [Build a Multi-Account Compliance Evidence Flow](labs/Lab-07-config-security-compliance/README.md)
+8. [Diagnose IAM Access and Protect Data with KMS](labs/Lab-08-iam-kms-data-protection/README.md)
+9. [Troubleshoot a VPC Connectivity Path](labs/Lab-09-vpc-path-diagnostics/README.md)
+10. [Operate DNS and Content-Delivery Failover](labs/Lab-10-route53-cloudfront-failover/README.md)
+11. [Diagnose Storage and Database Performance, Then Recover](labs/Lab-11-storage-database-recovery/README.md)
+12. [Resolve a Multi-Service CloudOps Incident](labs/Lab-12-integrated-incident-capstone/README.md)
 
-### Domain 3: Security, Cost, and Incident Response
+Every lab folder includes detailed Markdown, DOCX and PDF instructions, a JPEG architecture/reference image, an evidence checklist, editable AWS-native YAML/JSON/CLI/shell/Python assets, and cleanup guidance.
 
-| Lab | Title | Skills Practised |
-| --- | --- | --- |
-| [Lab 07](labs/lab-07-security-compliance-cost-optimization.md) | Security, Compliance, and Cost Optimization | KMS, GuardDuty, Security Hub, Config, Cost Explorer, Trusted Advisor |
-| [Lab 08](labs/lab-08-incident-response-exam-review.md) | Incident Response, Runbooks, and Exam Review | Troubleshooting, evidence collection, runbooks, post-incident review |
+## Safety
+
+- Use only the trainer-authorised learner AWS account and Region.
+- Replace every `REPLACE_...` placeholder with a learner-owned identifier.
+- Never commit credentials, private keys, full account IDs or customer data.
+- Capture evidence before cleanup, then verify deletion of chargeable resources.
 
 ## References
 
-- AWS Certified SysOps Administrator - Associate: https://aws.amazon.com/certification/certified-sysops-admin-associate/
-- Course registration: https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html
-- AWS Documentation: https://docs.aws.amazon.com/
-- AWS Skill Builder: https://skillbuilder.aws/
+- [Course registration](https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html)
+- [AWS Certified CloudOps Engineer — Associate](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)
+- [SOA-C03 exam guide](https://docs.aws.amazon.com/aws-certification/latest/sysops-administrator-associate-03/sysops-administrator-associate-03.html)
+- [AWS documentation](https://docs.aws.amazon.com/)
 
-## Free Tools Used
-
-- AWS Management Console
-- AWS CloudShell
-- AWS Command Line Interface
-- Amazon CloudWatch
-- AWS CloudTrail
-- Amazon EventBridge
-- AWS Systems Manager
-- AWS Pricing Calculator
-- AWS Free Tier eligible services where available
+Assessment papers and answer keys are confidential and intentionally excluded from this public repository.

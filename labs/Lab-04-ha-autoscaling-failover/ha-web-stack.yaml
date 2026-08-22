@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: TGS-2024051413 Lab 04 Multi-AZ web service
+Parameters:
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
+Resources:
+  VPC: {Type: AWS::EC2::VPC, Properties: {CidrBlock: 10.30.0.0/16, EnableDnsSupport: true, EnableDnsHostnames: true, Tags: [{Key: Course, Value: TGS-2024051413}]}}
+  IGW: {Type: AWS::EC2::InternetGateway}
+  Attach: {Type: AWS::EC2::VPCGatewayAttachment, Properties: {VpcId: !Ref VPC, InternetGatewayId: !Ref IGW}}
+  SubnetA: {Type: AWS::EC2::Subnet, Properties: {VpcId: !Ref VPC, CidrBlock: 10.30.1.0/24, AvailabilityZone: !Select [0, !GetAZs ''], MapPublicIpOnLaunch: true}}
+  SubnetB: {Type: AWS::EC2::Subnet, Properties: {VpcId: !Ref VPC, CidrBlock: 10.30.2.0/24, AvailabilityZone: !Select [1, !GetAZs ''], MapPublicIpOnLaunch: true}}
+  RouteTable: {Type: AWS::EC2::RouteTable, Properties: {VpcId: !Ref VPC}}
+  Route: {Type: AWS::EC2::Route, DependsOn: Attach, Properties: {RouteTableId: !Ref RouteTable, DestinationCidrBlock: 0.0.0.0/0, GatewayId: !Ref IGW}}
+  AssocA: {Type: AWS::EC2::SubnetRouteTableAssociation, Properties: {SubnetId: !Ref SubnetA, RouteTableId: !Ref RouteTable}}
+  AssocB: {Type: AWS::EC2::SubnetRouteTableAssociation, Properties: {SubnetId: !Ref SubnetB, RouteTableId: !Ref RouteTable}}
+  ALBSG: {Type: AWS::EC2::SecurityGroup, Properties: {GroupDescription: HTTP from internet for lab, VpcId: !Ref VPC, SecurityGroupIngress: [{IpProtocol: tcp, FromPort: 80, ToPort: 80, CidrIp: 0.0.0.0/0}]}}
+  WebSG: {Type: AWS::EC2::SecurityGroup, Properties: {GroupDescription: HTTP from ALB only, VpcId: !Ref VPC, SecurityGroupIngress: [{IpProtocol: tcp, FromPort: 80, ToPort: 80, SourceSecurityGroupId: !Ref ALBSG}]}}
+  LoadBalancer: {Type: AWS::ElasticLoadBalancingV2::LoadBalancer, Properties: {Subnets: [!Ref SubnetA, !Ref SubnetB], SecurityGroups: [!Ref ALBSG], Tags: [{Key: Course, Value: TGS-2024051413}]}}
+  TargetGroup: {Type: AWS::ElasticLoadBalancingV2::TargetGroup, Properties: {VpcId: !Ref VPC, Port: 80, Protocol: HTTP, HealthCheckPath: /, TargetType: instance}}
+  Listener: {Type: AWS::ElasticLoadBalancingV2::Listener, Properties: {LoadBalancerArn: !Ref LoadBalancer, Port: 80, Protocol: HTTP, DefaultActions: [{Type: forward, TargetGroupArn: !Ref TargetGroup}]}}
+  LaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateData:
+        ImageId: !Ref LatestAmiId
+        InstanceType: t3.micro
+        SecurityGroupIds: [!Ref WebSG]
+        UserData: !Base64 |
+          #!/bin/bash
+          dnf -y install httpd
+          echo "healthy $(hostname)" > /var/www/html/index.html
+          systemctl enable --now httpd
+        TagSpecifications: [{ResourceType: instance, Tags: [{Key: Course, Value: TGS-2024051413}, {Key: Name, Value: SysOps-Lab04}]}]
+  ASG:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      VPCZoneIdentifier: [!Ref SubnetA, !Ref SubnetB]
+      MinSize: '2'
+      DesiredCapacity: '2'
+      MaxSize: '4'
+      TargetGroupARNs: [!Ref TargetGroup]
+      HealthCheckType: ELB
+      HealthCheckGracePeriod: 180
+      LaunchTemplate: {LaunchTemplateId: !Ref LaunchTemplate, Version: !GetAtt LaunchTemplate.LatestVersionNumber}
+Outputs:
+  URL: {Value: !Sub 'http://${LoadBalancer.DNSName}'}
+  TargetGroupArn: {Value: !Ref TargetGroup}
+  AutoScalingGroupName: {Value: !Ref ASG}

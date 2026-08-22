@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.claude/
+assessment/
+reference/
+courseware/archive/
+labs/archive/
+labs/.shared-assets/
+qa/
+*.pyc
+__pycache__/

@@ -1,0 +1,7 @@
+{
+  "id": "lab02-test-event",
+  "time": "2026-08-23T00:00:00Z",
+  "source": "aws.ec2",
+  "detail-type": "AWS API Call via CloudTrail",
+  "detail": {"eventSource": "ec2.amazonaws.com", "eventName": "AuthorizeSecurityGroupIngress", "userIdentity": {"arn": "arn:aws:iam::111122223333:user/lab-learner"}, "requestParameters": {"groupId": "sg-learner-owned"}}
+}

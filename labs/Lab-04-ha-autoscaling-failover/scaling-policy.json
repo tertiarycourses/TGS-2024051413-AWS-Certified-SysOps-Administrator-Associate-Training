@@ -1,0 +1,6 @@
+{
+  "AutoScalingGroupName": "REPLACE_ASG_NAME",
+  "PolicyName": "SysOps-Lab04-CPU50",
+  "PolicyType": "TargetTrackingScaling",
+  "TargetTrackingConfiguration": {"PredefinedMetricSpecification": {"PredefinedMetricType": "ASGAverageCPUUtilization"}, "TargetValue": 50.0, "DisableScaleIn": false}
+}

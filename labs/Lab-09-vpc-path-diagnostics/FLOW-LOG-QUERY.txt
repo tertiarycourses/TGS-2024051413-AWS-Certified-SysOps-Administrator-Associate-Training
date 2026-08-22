@@ -1,0 +1,4 @@
+fields @timestamp, interfaceId, srcAddr, dstAddr, srcPort, dstPort, action
+| filter interfaceId = 'REPLACE_ENI' and dstAddr = 'REPLACE_DESTINATION_IP'
+| sort @timestamp desc
+| limit 50

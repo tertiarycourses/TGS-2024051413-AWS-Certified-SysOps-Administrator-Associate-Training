@@ -1,0 +1,1 @@
+{"IPAddress":"REPLACE_PRIMARY_IP","Port":443,"Type":"HTTPS","ResourcePath":"/health","FullyQualifiedDomainName":"REPLACE_PRIMARY_HOST","RequestInterval":30,"FailureThreshold":3,"MeasureLatency":true,"EnableSNI":true}

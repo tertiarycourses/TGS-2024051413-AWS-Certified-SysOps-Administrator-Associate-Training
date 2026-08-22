@@ -1,0 +1,5 @@
+{
+  "widgets": [
+    {"type":"metric","x":0,"y":0,"width":12,"height":6,"properties":{"title":"Lab 01 EC2 Operations","view":"timeSeries","region":"ap-southeast-1","metrics":[["AWS/EC2","CPUUtilization","InstanceId","REPLACE_INSTANCE_ID",{"stat":"Average","period":300}]],"yAxis":{"left":{"min":0,"max":100}}}}
+  ]
+}

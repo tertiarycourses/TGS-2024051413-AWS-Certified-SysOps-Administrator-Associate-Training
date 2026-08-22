@@ -1,0 +1,14 @@
+{
+  "AlarmName": "SysOps-Lab01-HighCPU",
+  "AlarmDescription": "Training alarm; owner REPLACE_OWNER; investigate before action",
+  "MetricName": "CPUUtilization",
+  "Namespace": "AWS/EC2",
+  "Statistic": "Average",
+  "Dimensions": [{"Name":"InstanceId","Value":"REPLACE_INSTANCE_ID"}],
+  "Period": 300,
+  "EvaluationPeriods": 2,
+  "DatapointsToAlarm": 2,
+  "Threshold": 70,
+  "ComparisonOperator": "GreaterThanThreshold",
+  "TreatMissingData": "missing"
+}

@@ -1,0 +1,1 @@
+{"BackupSelection":{"SelectionName":"CourseTaggedResources","IamRoleArn":"REPLACE_BACKUP_ROLE_ARN","ListOfTags":[{"ConditionType":"STRINGEQUALS","ConditionKey":"aws:ResourceTag/Course","ConditionValue":"TGS-2024051413"}]}}

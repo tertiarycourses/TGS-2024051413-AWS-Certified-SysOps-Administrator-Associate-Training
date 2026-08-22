@@ -1,0 +1,1 @@
+{"Version":"2012-10-17","Statement":[{"Sid":"EnableAccountAdministration","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::REPLACE_ACCOUNT:root"},"Action":"kms:*","Resource":"*"}]}
