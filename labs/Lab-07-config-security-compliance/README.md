@@ -1,7 +1,7 @@
 # Lab 07 — Build a Multi-Account Compliance Evidence Flow
 
 Course: AWS Certified SysOps Administrator Associate Training (TGS-2024051413)
-Version: v5.0
+Version: v6.0
 Day: 2
 Topic: 07
 Estimated duration: 45–75 minutes

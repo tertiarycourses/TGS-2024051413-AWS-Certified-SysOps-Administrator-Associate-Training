@@ -1,7 +1,7 @@
 # Lab 11 — Diagnose Storage and Database Performance, Then Recover
 
 Course: AWS Certified SysOps Administrator Associate Training (TGS-2024051413)
-Version: v5.0
+Version: v6.0
 Day: 3
 Topic: 09
 Estimated duration: 45–75 minutes

@@ -1,7 +1,7 @@
 # Lab 04 — Deploy and Test a Multi-AZ Highly Available Service
 
 Course: AWS Certified SysOps Administrator Associate Training (TGS-2024051413)
-Version: v5.0
+Version: v6.0
 Day: 1
 Topic: 04
 Estimated duration: 45–75 minutes

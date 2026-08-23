@@ -1,7 +1,7 @@
 # Lab 12 — Capstone — Resolve a Multi-Service CloudOps Incident
 
 Course: AWS Certified SysOps Administrator Associate Training (TGS-2024051413)
-Version: v5.0
+Version: v6.0
 Day: 3
 Topic: 10
 Estimated duration: 45–75 minutes

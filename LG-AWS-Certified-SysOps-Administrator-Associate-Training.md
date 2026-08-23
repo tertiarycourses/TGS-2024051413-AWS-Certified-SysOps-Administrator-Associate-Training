@@ -1,7 +1,7 @@
 # AWS Certified SysOps Administrator Associate Training — Learner Guide
 
 **Course code:** TGS-2024051413
-**Version:** v5.0 · 23 August 2026
+**Version:** v6.0 · 23 August 2026
 **Training provider:** Tertiary Infotech Academy Pte Ltd · UEN: 201200696W
 
 
@@ -62,31 +62,31 @@ The slide deck explains systems, relationships and operational decisions. This L
 
 | Start | End | Facilitated activity |
 | --- | --- | --- |
-| 09:00 | 09:45 | Administration, outcomes and CloudOps transition |
-| 09:45 | 11:15 | Topic 01 — Cloud Operations Foundations |
-| 11:15 | 13:00 | Topic 02 — Monitoring and Incident Response + Labs 01–02 |
-| 14:00 | 16:00 | Topic 03 — EC2 and Systems Management + Lab 03 |
-| 16:00 | 18:00 | Topic 04 — Reliability and High Availability + Lab 04 |
+| 09:30 | 10:15 | Administration, outcomes and CloudOps transition |
+| 10:15 | 11:45 | Topic 01 — Cloud Operations Foundations |
+| 11:45 | 13:30 | Topic 02 — Monitoring and Incident Response + Labs 01–02 |
+| 14:30 | 16:30 | Topic 03 — EC2 and Systems Management + Lab 03 |
+| 16:30 | 18:30 | Topic 04 — Reliability and High Availability + Lab 04 |
 
 
 #### Day 2 — Reliability, continuity, deployment automation and security
 
 | Start | End | Facilitated activity |
 | --- | --- | --- |
-| 09:00 | 11:00 | Topic 05 — Backup and Continuity + Lab 06 |
-| 11:00 | 13:00 | Topic 06 — Provisioning and Automation + Lab 05 |
-| 14:00 | 16:00 | Topic 07 — Security and Compliance + Labs 07–08 |
-| 16:00 | 18:00 | Change, recovery and compliance synthesis across four labs |
+| 09:30 | 11:30 | Topic 05 — Backup and Continuity + Lab 06 |
+| 11:30 | 13:30 | Topic 06 — Provisioning and Automation + Lab 05 |
+| 14:30 | 16:30 | Topic 07 — Security and Compliance + Labs 07–08 |
+| 16:30 | 18:30 | Change, recovery and compliance synthesis across four labs |
 
 
 #### Day 3 — Networking, data operations, integrated troubleshooting and assessment
 
 | Start | End | Facilitated activity |
 | --- | --- | --- |
-| 09:00 | 11:00 | Topic 08 — Networking, DNS and Content Delivery + Labs 09–10 |
-| 11:00 | 13:00 | Topic 09 — Storage and Database Operations + Lab 11 |
-| 14:00 | 16:00 | Topic 10 — Integrated Troubleshooting + Lab 12 capstone |
-| 16:00 | 18:00 | Written Assessment (60 min) + Case Study (60 min) |
+| 09:30 | 11:30 | Topic 08 — Networking, DNS and Content Delivery + Labs 09–10 |
+| 11:30 | 13:30 | Topic 09 — Storage and Database Operations + Lab 11 |
+| 14:30 | 16:30 | Topic 10 — Integrated Troubleshooting + Lab 12 capstone |
+| 16:30 | 18:30 | Written Assessment (60 min) + Case Study (60 min) |
 
 
 ### Assessment Design

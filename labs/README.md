@@ -1,7 +1,7 @@
 # AWS Certified SysOps Administrator Associate Training — Hands-On Labs
 
 Course code: TGS-2024051413
-Version: v5.0
+Version: v6.0
 
 Twelve connected AWS operations labs are scheduled at four labs per day. Detailed procedures are contained here and in the Learner Guide; the slide deck remains concept-led.
 

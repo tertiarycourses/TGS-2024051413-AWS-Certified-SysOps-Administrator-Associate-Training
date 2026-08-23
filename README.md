@@ -1,15 +1,44 @@
 # AWS Certified SysOps Administrator Associate Training
 
-Course code: **TGS-2024051413**
-Duration: **3 days / 24 hours**
-Provider: **Tertiary Infotech Academy Pte Ltd**
+Build the operational judgement and AWS-native skills needed to monitor, automate, secure, recover and troubleshoot production-style cloud workloads.
 
-[![Course](https://img.shields.io/badge/WSQ-TGS--2024051413-1f6feb)](https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html)
-[![AWS](https://img.shields.io/badge/AWS-CloudOps-ff9900)](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)
+| Course detail | Information |
+| --- | --- |
+| Course code | `TGS-2024051413` |
+| Programme | WSQ |
+| Duration | 3 days / 24 hours |
+| Registration | [View course details and register](https://www.tertiarycourses.com.sg/wsq-aws-certified-sysops-administrator-associate-training.html) |
+| Funding | Up to 70% course-fee funding. Eligibility and prevailing terms apply. |
+| Provider | Tertiary Infotech Academy Pte Ltd |
 
-This repository contains the learner-facing v5.0 courseware and twelve self-contained AWS operations labs. The approved WSQ course title remains SysOps Administrator; certification-readiness content follows the current AWS Certified CloudOps Engineer — Associate (SOA-C03) blueprint.
+## About the course
+
+This repository contains the learner-facing v6.0 courseware and twelve self-contained AWS operations labs. The approved WSQ course title remains SysOps Administrator; certification-readiness content follows the current AWS Certified CloudOps Engineer — Associate (SOA-C03) blueprint.
 
 ![AWS CloudOps course visual](courseware/assets/aws-sysops-cover-hero.png)
+
+## Learning outcomes
+
+By the end of the course, learners will be able to:
+
+- Maintain business continuity of AWS cloud operations to support stable service delivery.
+- Implement secure AWS cloud infrastructure, data-loading and performance-monitoring controls.
+- Apply service-quality standards for security and compliance.
+- Analyse and resolve processing issues affecting continuity and disaster recovery.
+- Troubleshoot networking performance issues at scale.
+
+## Topics covered
+
+1. Cloud Operations Foundations
+2. Monitoring, Logging and Incident Response
+3. Compute, Virtualisation and Systems Management
+4. Reliability, Elasticity and High Availability
+5. Backup, Restore and Business Continuity
+6. Deployment, Provisioning and Automation
+7. Security, Identity and Compliance
+8. Networking, DNS and Content Delivery
+9. Storage, Data and Database Operations
+10. Performance, Cost and Integrated Troubleshooting
 
 ## Courseware
 
@@ -17,7 +46,7 @@ This repository contains the learner-facing v5.0 courseware and twelve self-cont
 | --- | --- |
 | [Learner Guide](LG-AWS-Certified-SysOps-Administrator-Associate-Training.md) | Detailed concepts, step-by-step lab procedures, troubleshooting and assessment readiness. |
 | [Labs index](labs/README.md) | All 12 labs, scheduled at exactly four labs per day. |
-| `courseware/` | v5.0 PowerPoint/PDF, Learner Guide DOCX/PDF and Lesson Plan DOCX/PDF. |
+| `courseware/` | v6.0 PowerPoint/PDF, Learner Guide DOCX/PDF and Lesson Plan DOCX/PDF. |
 
 ## Three-Day Lab Journey
 

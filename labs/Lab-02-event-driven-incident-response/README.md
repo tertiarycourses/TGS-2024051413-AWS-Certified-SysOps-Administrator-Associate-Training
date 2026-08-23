@@ -1,7 +1,7 @@
 # Lab 02 — Automate Event-Driven Incident Triage
 
 Course: AWS Certified SysOps Administrator Associate Training (TGS-2024051413)
-Version: v5.0
+Version: v6.0
 Day: 1
 Topic: 02
 Estimated duration: 45–75 minutes
